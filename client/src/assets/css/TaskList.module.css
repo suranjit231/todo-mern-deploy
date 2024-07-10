@@ -1,0 +1,80 @@
+.taskListContainer{
+    height: calc(100% - 40px);
+    padding: 15px;
+    
+}
+
+.mainHeader{
+    text-align: center;
+    font-size: 20px;
+    color: #f0f8ff;
+}
+
+.taskBoxWrapper{
+    width: 50%;
+    position: relative;
+    height: auto;
+    padding: 10px 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+
+}
+
+.emptyTaskPara{
+    text-align: center;
+    font-weight: 600;
+    color: brown;
+}
+
+.searchInput{
+    width: 100%;
+    padding: 7px 10px;
+    border: none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.466);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    flex: 1;
+    
+}
+
+.searchInput:focus{
+    border: 1.5px solid rgb(82, 79, 79);
+}
+
+
+.serarchDiv{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.serarchDiv button{
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #f0f8ff;
+    background-color: rgba(0, 0, 0, 0.534);
+    transition: 0.3s ease-in-out;
+}
+
+.serarchDiv button:hover{
+    background-color: rgb(0, 0, 22);
+}
+
+
+
+
+/* ================ media query for 768px ================== */
+@media screen and (max-width: 768px) {
+    .taskBoxWrapper{
+        width: 100%;
+    }
+}

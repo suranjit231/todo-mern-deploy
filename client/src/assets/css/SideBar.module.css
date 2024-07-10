@@ -1,0 +1,37 @@
+.sideBarContainer{
+    width: 200px;
+    height: 380px;
+    position: fixed;
+    top: 40px;
+    left: -100%;
+    z-index: 10000;
+    background-color: rgba(14, 13, 13, 0.856);
+    transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 5px;
+}
+
+.slideIn{
+    left: 0;
+}
+
+.slideOut{
+    left: -100%;
+}
+
+.sideBarContainer p{
+    color: silver;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    padding: 5px;
+}
+
+.sideBarContainer p:hover{
+    background-color: aqua;
+    border-radius: 5px;
+    color: rgb(7, 1, 32);
+}
+

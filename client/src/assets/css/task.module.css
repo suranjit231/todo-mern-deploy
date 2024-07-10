@@ -1,0 +1,79 @@
+.taskBox{
+    width: 100%;
+  
+    margin-bottom: 5px;
+    padding: 10px;
+    height: auto;
+    border-radius: 8px;
+    background-color: rgb(1, 1, 15);
+    display: flex;
+    gap: 15px;
+    position: relative;
+   transition: 0.4s ease-in-out;
+
+
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* border: 1px solid red; */
+    flex: 0.4;
+   border-right: 1px solid #c0c0c0;
+}
+
+.title{
+    font-size: 1rem;
+    color: #f0f8ff;
+}
+
+.dueDate{
+    color: #c0c0c0;
+    font-size: 0.8rem;
+}
+
+.dueDate span{
+    margin-left: 5px;
+}
+
+.status{
+    color: #c0c0c0;
+    cursor: pointer;
+}
+
+.status .complete{
+    color: green;
+}
+
+.rightBox{
+    flex: 1;
+    /* border: 1px solid yellow; */
+   
+}
+
+.rightBox p{
+    color: grey;
+    font-size: 15px;
+}
+
+.taskControlDiv{
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.delete{
+    color: brown;
+    font-size: 20px;
+}
+
+.edit{
+    color: lightblue;
+    font-size: 20px;
+}

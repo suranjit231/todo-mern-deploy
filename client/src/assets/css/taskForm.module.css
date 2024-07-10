@@ -1,0 +1,106 @@
+/* taskForm.module.css */
+.taskFromContainer {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0px;
+    position: relative;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease, top 0.5s ease;
+}
+
+.taskFromContainer.slideIn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0%);
+}
+
+.taskFromContainer.slideOut {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100%);
+}
+
+.taskFromContainer form {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+.taskFromContainer form h3 {
+    color: aliceblue;
+}
+
+.formControlDiv {
+    width: 100%;
+}
+
+.formControlDiv input {
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.formControlDiv input:focus {
+    border: 1.5px solid grey;
+}
+
+.buttonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0px;
+}
+
+.buttonDiv button {
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    font-size: 18px;
+    font-weight: 500;
+    color: silver;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonDiv button:active {
+    transform: translateY(-5px);
+}
+
+.addBtn {
+    background-color: green;
+}
+
+.clearBtn {
+    background-color: red;
+}
+
+.closeBtn {
+    position: absolute;
+    color: grey;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.closeBtn:active {
+    transform: scale(0.9);
+}
+
+
+@media screen and (max-width: 768px) {
+    .taskFromContainer{
+        width: 100%;
+    }
+}

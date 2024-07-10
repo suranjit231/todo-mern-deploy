@@ -1,0 +1,35 @@
+.navContainer{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(1, 1, 15);
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.leftNavbar{
+    color: #f0f8ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.leftNavbar i{
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: 0.4s ease-in-out;
+}
+
+/* .leftNavbar i:active{
+    transform: translateY(-2px);
+} */
+
+.rightNavbar{
+    color: #f0f8ff;
+    cursor: pointer;
+}
