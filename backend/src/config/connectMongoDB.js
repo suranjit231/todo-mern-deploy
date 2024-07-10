@@ -1,27 +1,25 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+
+// Load environment variables from .env file
 dotenv.config();
-import mongoose from "mongoose";
 
-
-
-//========= connecting mongodb using mongoose =================//
-const connectMongodb = async()=>{
-   // const url = `${process.env.DB_URl}/Task_DB`
-    try{
-        await mongoose.connect(process.env.DB_URl,
-        {
-            useNewUrlParser:true,
-            useUnifiedTopology:true
-        })
-
-        console.log("mongodb is connected!")
-
-    }catch(error){
-        console.log(error);
-        console.log("mongodb connection falid!")
-
+const connectMongodb = async () => {
+  try {
+    const dbUrl = process.env.DB_URL;
+    if (!dbUrl) {
+      throw new Error("DB_URL is not defined in environment variables");
     }
 
-}
+    await mongoose.connect(dbUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+
+    console.log("MongoDB is connected!");
+  } catch (error) {
+    console.error("MongoDB connection failed!", error);
+  }
+};
 
 export default connectMongodb;
