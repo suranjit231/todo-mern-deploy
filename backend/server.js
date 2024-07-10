@@ -46,7 +46,10 @@ app.use(errorHandler);
 
 
 //========= listening in port ===============================//
-let PORT = process.env.PORT || 3200 ;
+const PORT = process.env.PORT;
+
+
+
 app.listen(PORT, ()=>{
     console.log(`app is listen on port ${PORT}`);
     connectMongodb();
