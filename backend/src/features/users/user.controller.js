@@ -53,7 +53,8 @@ export default class UserController{
                }, process.env.JWT_SECRET, { expiresIn: '3h' });
 
             return res.status(200)
-                .cookie("jwtToken", token, { maxAge: 2 * 60 * 60 * 1000, httpOnly: true })
+                .cookie("jwtToken", token, { maxAge: 2 * 60 * 60 * 1000, httpOnly: true, secure: true, 
+                sameSite: 'None' })
                 .json({sucess:true,signinResult,token});
 
         }catch(error){
