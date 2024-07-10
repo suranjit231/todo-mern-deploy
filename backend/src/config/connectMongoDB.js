@@ -4,9 +4,9 @@ import mongoose from "mongoose";
 
 //========= connecting mongodb using mongoose =================//
 const connectMongodb = async()=>{
-    const url = `${process.env.DB_URl}/Task_DB`
+   // const url = `${process.env.DB_URl}/Task_DB`
     try{
-        await mongoose.connect(url,
+        await mongoose.connect(process.env.DB_URl,
         {
             useNewUrlParser:true,
             useUnifiedTopology:true
